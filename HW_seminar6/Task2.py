@@ -17,4 +17,4 @@ m = int(input(f'Введите max значение диапазона, боль
 array = [random.randint(1, 10) for i in range(l)]
 print(array)
 
-print(f'Индексы элементов массива, значения которых лежат в диапозоне от {n} до {m}: {[i for i in range(len(array)) if array[i] > n and array[i] < m]}')
+print(f'Индексы элементов массива, значения которых лежат в диапозоне от {n} до {m}: {[i for i in range(len(array)) if array[i] >= n and array[i] <= m]}')
