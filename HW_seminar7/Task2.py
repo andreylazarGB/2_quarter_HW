@@ -15,8 +15,6 @@
 # 5 10 15 20 25 30
 # 6 12 18 24 30 36
 
-operation = lambda x, y: x * y
-
 def print_operation_table(operation, num_rows=6, num_columns=6):
     for x in range(1, num_rows+1):
         list1 = []
@@ -24,6 +22,8 @@ def print_operation_table(operation, num_rows=6, num_columns=6):
             res = operation(x, y)
             list1.append(res)
         print(*list1)
+
+operation = lambda x, y: x * y
 print_operation_table(operation)
 
 
