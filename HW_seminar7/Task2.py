@@ -15,16 +15,21 @@
 # 5 10 15 20 25 30
 # 6 12 18 24 30 36
 
+# def print_operation_table(operation, num_rows=6, num_columns=6):
+#     for x in range(1, num_rows+1):
+#         list1 = []
+#         for y in range(1, num_columns+1):
+#             res = operation(x, y)
+#             list1.append(res)
+#         print(*list1)
+        
+# print_operation_table(lambda x, y: x * y)
+
+
 def print_operation_table(operation, num_rows=6, num_columns=6):
-    for x in range(1, num_rows+1):
-        list1 = []
-        for y in range(1, num_columns+1):
-            res = operation(x, y)
-            list1.append(res)
-        print(*list1)
-
-operation = lambda x, y: x * y
-print_operation_table(operation)
-
-
+    res = [[operation(x, y) for y in range(1, num_columns + 1)] for x in range(1, num_rows + 1)]
+    print('\n'.join('\t'.join(map(str, num_rows)) for num_rows in res))
+    
+    
+print_operation_table(lambda x, y: x * y)
 

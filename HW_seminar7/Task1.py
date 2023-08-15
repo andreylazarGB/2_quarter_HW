@@ -18,7 +18,6 @@ poem = poem.split()
 print(poem)
 vowels = ['а', 'я', 'у', 'ю', 'о', 'е', 'ё', 'э', 'и', 'ы']
 
-
 list_1 = [0 for i in range(len(poem))]
 
 for i in range(len(poem)):
