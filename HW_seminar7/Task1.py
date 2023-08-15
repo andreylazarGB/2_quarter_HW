@@ -18,19 +18,16 @@ poem = poem.split()
 print(poem)
 vowels = ['а', 'я', 'у', 'ю', 'о', 'е', 'ё', 'э', 'и', 'ы']
 
-list_1= []
-for i in range(len(poem)):
-    list_1.append(0)
+
+list_1 = [0 for i in range(len(poem))]
 
 for i in range(len(poem)):
     count_vowels = [x + y for x, y in zip(list_1, [x.count(vowels[i]) for x in poem])]
     list_1 = count_vowels
 print(list_1)
 
-if len(set(list_1)) == 1:
-    print ('Парам пам-пам ')
-else:
-    print ('Пам парам ')
+print ('Парам пам-пам ' if len(set(list_1)) == 1 else 'Пам парам ')
+
 
 
 
