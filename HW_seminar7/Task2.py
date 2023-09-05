@@ -21,7 +21,7 @@
 #         for y in range(1, num_columns+1):
 #             res = operation(x, y)
 #             list1.append(res)
-#         print(*list1)
+#         print('\t'.join(map(str, list1)))
         
 # print_operation_table(lambda x, y: x * y)
 
@@ -30,6 +30,8 @@ def print_operation_table(operation, num_rows=6, num_columns=6):
     res = [[operation(x, y) for y in range(1, num_columns + 1)] for x in range(1, num_rows + 1)]
     print('\n'.join('\t'.join(map(str, num_rows)) for num_rows in res))
     
-    
+
 print_operation_table(lambda x, y: x * y)
+
+
 
